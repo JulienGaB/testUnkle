@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="style.css">
+    <title>Test Front End Unkle</title>
+</head>
+<body>
+    <header class="headerContent">
+        <div>
+            <button class="btnMenu jsGenTooltip" id="menu">Menu1</button>
+        </div>
+        <div>
+            <button class="btnMenu jsGenTooltip" id="menu">Menu2</button>
+        </div>
+        <div>
+            <button class="btnMenu jsGenTooltip" id="menu">Menu3</button>
+        </div>
+    </header>
+    <section class="formulaire">
+        <form class="formContainer">
+            <div class="formContent">
+                <input class="inputElement jsGenTooltip" type="text" id="nom" name="nom">
+                <label class="labelInputElement" for="nom">Nom</label>
+            </div>
+            <div class="formContent">
+                <input class="inputElement jsGenTooltip" type="text" id="prenom" name="prenom">
+                <label class="labelInputElement" for="prenom">Prénom</label>
+            </div>
+            <div class="formContent">
+                <input class="inputElement jsGenTooltip" type="text" id="entreprise" name="entreprise">
+                <label class="labelInputElement" for="entreprise">Entreprise</label>
+            </div>
+            <div class="formContent">
+                <textarea class="textareaElement jsGenTooltip" name="message" id="message"></textarea>
+                <label class="labelTextareaElement" for="message">Message</label>
+            </div>
+            <div class="formContent">
+                <button type="submit" class="btnElement">Envoyer</button>
+            </div>
+        </form>
+    </section>
+    <footer class="footerContent">
+        <div>
+            <button class="btnMenu jsGenTooltip" id="menu">Menu1</button>
+        </div>
+        <div>
+            <button class="btnMenu jsGenTooltip" id="menu">Menu2</button>
+        </div>
+        <div>
+            <button class="btnMenu jsGenTooltip" id="menu">Menu3</button>
+        </div>
+    </footer>
+
+    <input type="hidden" id="nomTooltipText" value="Veuillez renseigner le nom">
+    <input type="hidden" id="prenomTooltipText" value="Veuillez renseigner le prénom">
+    <input type="hidden" id="entrepriseTooltipText" value="Veuillez renseigner le nom d'entreprise">
+    <input type="hidden" id="messageTooltipText" value="Vous avez la possibilité de laisser un message afin d'expliquer pourquoi nous avoir contacté. Vous pouvez mieux expliquer votre projet.">
+    <input type="hidden" id="menuTooltipText" value="html_menuList">
+    <div class="hiddenContainer">
+        <div id="menuList">
+            <ul class="menuListContent">
+                <li class="menuListElement">
+                    Test 1
+                </li>
+                <li class="menuListElement">
+                    Test 2
+                </li>
+                <li class="menuListElement">
+                    Test 3
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
