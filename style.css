@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+.hiddenContainer {
+    display: none;
+}
+
+.menuListContent .menuListElement {
+    display: block;
+    padding: 10px;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+    cursor: pointer;
+}
+
+.menuListContent .menuListElement:hover {
+    background: #ddd;
+}
+
+
+.headerContent {
+    background: white;
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContent .btnMenu {
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.footerContent {
+    background: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerContent .btnMenu {
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background: #efefef;
+    height: 100vh;
+    width: 100%;
+}
+
+.formulaire .formContainer {
+    margin: auto;
+    min-width: 750px;
+    padding: 100px;
+    background: #efefef;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+.formulaire .formContainer .formContent {
+    width: 100%;
+    position: relative;
+    margin: 30px 0;
+}
+
+.formulaire .formContainer .formContent .labelInputElement {
+    cursor: pointer;
+    position: absolute;
+    bottom: 17px;
+    left: 0;
+    font-size: 20px;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+
+.formulaire .formContainer .formContent .labelTextareaElement {
+    cursor: pointer;
+    position: absolute;
+    bottom: 17px;
+    left: 0;
+    font-size: 20px;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+
+.formulaire .formContainer .formContent .inputElement,
+.formulaire .formContainer .formContent .textareaElement {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid rgba(0,0,0,0.25);
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+    color: #000;
+    font-family: sans-serif;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+
+.formulaire .formContainer .formContent .textareaElement {
+    resize: none;
+    height: 100px;
+}
+
+.formulaire .formContainer .formContent .inputElement:focus,
+.formulaire .formContainer .formContent .textareaElement:focus {
+    border-bottom: 2px solid #000;
+}
+
+.formulaire .formContainer .formContent .inputElement:focus + .labelInputElement {
+    bottom: 45px;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.formulaire .formContainer .formContent .textareaElement:focus + .labelTextareaElement {
+    bottom: 105px;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.formulaire .formContainer .formContent .btnElement {
+    border: 1px solid #000;
+    background: #efefef;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+    cursor: pointer;
+}
+
+.formulaire .formContainer .formContent .btnElement:hover {
+    background: #000;
+    color: #fff;
+}
+
+.tooltipParent {
+    position: relative;
+}
+
+.tooltipParent .tooltipElementContent {
+    z-index: -1;
+    left: 50%;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    min-width: 100%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-15px);
+    -webkit-transform: translateX(-50%) translateY(-15px);
+    -moz-transform: translateX(-50%) translateY(-15px);
+    -ms-transform: translateX(-50%) translateY(-15px);
+    -o-transform: translateX(-50%) translateY(-15px);
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -ms-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+
+.tooltipParent .tooltipElementContent.withPointerEvents {
+    pointer-events:none;
+}
+
+.tooltipParent .tooltipElementContent .tooltipElement {
+    max-width: 450px;
+    min-width: 150px;
+    background: #efefef;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+.tooltipParent:hover .tooltipElementContent {
+    opacity: 1;
+    z-index: 1000;
+}
+
+/* POSITION */
+
+.tooltipParent .tooltipElementContent.bottomPosition {
+    top: calc(100% + 15px);
+    align-items: flex-start;
+}
+
+.tooltipParent .tooltipElementContent.topPosition {
+    bottom:  calc(100% + 15px);
+    align-items: flex-end;
+
+}
+
+.tooltipParent .tooltipElementContent.leftPosition {
+    left: -10px;
+    justify-content: flex-start;
+    transform: translateX(0) translateY(-15px);
+    -webkit-transform: translateX(0) translateY(-15px);
+    -moz-transform: translateX(0) translateY(-15px);
+    -ms-transform: translateX(0) translateY(-15px);
+    -o-transform: translateX(0) translateY(-15px);
+}
+
+.tooltipParent .tooltipElementContent.rightPosition {
+    right: -10px;
+    left: inherit;
+    justify-content: flex-end;
+    transform: translateX(0) translateY(-15px);
+    -webkit-transform: translateX(0) translateY(-15px);
+    -moz-transform: translateX(0) translateY(-15px);
+    -ms-transform: translateX(0) translateY(-15px);
+    -o-transform: translateX(0) translateY(-15px);
+}
+
+
+.tooltipParent:hover .tooltipElementContent,
+.tooltipParent:hover .tooltipElementContent.leftPosition,
+    .tooltipParent:hover .tooltipElementContent.rightPosition {
+    transform: translateX(0) translateY(0);
+    -webkit-transform: translateX(0) translateY(0);
+    -moz-transform: translateX(0) translateY(0);
+    -ms-transform: translateX(0) translateY(0);
+    -o-transform: translateX(0) translateY(0);
+}
+
+.tooltipParent:hover .tooltipElementContent {
+    transform: translateX(-50%) translateY(0);
+    -webkit-transform: translateX(-50%) translateY(0);
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    -o-transform: translateX(-50%) translateY(0);
+}
